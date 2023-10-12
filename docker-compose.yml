@@ -1,0 +1,11 @@
+version: "3"
+services:
+  app:
+    image: docker.io/timoteoramos/mapos-docker:latest
+    build:
+      context: .
+      target: production
+    env_file:
+      - docker.env
+    ports:
+      - "8000:80"
